@@ -25,6 +25,6 @@
         const buffer = await response.arrayBuffer();
 
         fs.createWriteStream(attachmentPath).write(Buffer.from(buffer));
-        console.log(`Figurinha baixada: ${sticker?.name} (${sticker?.id})`);
+        console.log(`Sticker downloaded: ${sticker?.name} (${sticker?.id})`);
     }
 })();
