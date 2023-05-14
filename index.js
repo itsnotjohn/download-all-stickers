@@ -22,9 +22,9 @@
         if (!fs.existsSync(filePath)) fs.mkdirSync('stickers');
 
         const response = await fetch(stickerURL);
-        const buffer = await response.arrayBuffer();
+        const buffer = Buffer.from(await response.arrayBuffer());
 
-        fs.createWriteStream(attachmentPath).write(Buffer.from(buffer));
-        console.log(`Sticker downloaded: ${sticker?.name} (${sticker?.id})`);
+        fs.createWriteStream(attachmentPath).write(buffer);
+        console.log(`Figurinha baixada: ${sticker?.name} (${sticker?.id})`);
     }
 })();
