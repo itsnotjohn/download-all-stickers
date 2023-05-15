@@ -17,7 +17,7 @@
         const stickerURL = `https://media.discordapp.net/stickers/${sticker?.id}.png?size=2048`;
 
         const filePath = `${__dirname}/stickers/`;
-        const attachmentPath = `${filePath}/${sticker?.name} (${sticker?.id}).png`;
+        const attachmentPath = `${filePath}/${sticker?.id}.png`;
 
         if (!fs.existsSync(filePath)) fs.mkdirSync('stickers');
 
