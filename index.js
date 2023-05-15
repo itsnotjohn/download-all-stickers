@@ -10,10 +10,10 @@
     });
 
     const res = await response.json();
-    const stickersInfo = res?.stickers;
+    const stickersArray = res?.stickers;
 
-    for (let i = 0; i < stickersInfo.length; i++) {
-        const sticker = stickersInfo[i];
+    for (let i = 0; i < stickersArray.length; i++) {
+        const sticker = stickersArray[i];
         const stickerURL = `https://media.discordapp.net/stickers/${sticker?.id}.png?size=2048`;
 
         const filePath = `${__dirname}/stickers/`;
