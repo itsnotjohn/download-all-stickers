@@ -1,1 +1,1 @@
-> change the `config.json` information and be happy
+change the `config.json` information and be happy
